@@ -1,65 +1,120 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="asset/accounting.png">
-        <title>Basic Accounting</title>
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <img src="asset/Basic ac.png" alt="" weight="180" height="80">
-            </div>
-            <div class="navbar">
-                <a href="index.html">Home</a>
-                <a href="#layanan">Layanan</a>
-                <a href="#login">Login</a>
-            </div>
-        </header>
-        <main>
-            <center>
-                <h1>
-                    Konsultan Akuntansi di Indonesia
-                </h1>
-                <p>Mulai dari pengusaha UMKM hingga Perusahaan Besar</p>
-                <img src="asset/shutterstock_458824123-1.jpg" alt="background" height="350">
-            </center>
-            <div class="single-page">
-                <div class="site">
-                    <h2>Pentingnya Jasa Akuntan di Indonesia</h2>
-                    <p>Dalam memastikan bisnis asing di Indonesia memiliki kepatutan finansial yang baik, pemerintah Indonesia membuat kebijakan agar para pelaku bisnis asing di Indonesia mematuhi kewajiban terkait pelaporan finansial dan pajak. Dengan peraturan yang cenderung rumit, mendapatkan bantuan dari firma pajak dan akuntansi yang memiliki pengetahuan mendalam tentang tolak ukur pelaporan finansial di Indonesia akan membuat prosesnya jadi lebih mudah.</p>
-                    <img src="asset/jasa-akuntansi.jpeg" alt="" height="200">
-                </div>
-                <div class="site">
-                    <h2>Konsultan Akuntansi Basic Accounting</h2>
-                    <p>Basic Accounting menawarkan konsultan akuntan sebagai bagian dari layanan dengan mengedepankan kualitas dan juga akurasi. Staf akuntan berpengalaman kami dibekali dengan pengetahuan bisnis lokal secara mendalam. Kualifikasi jasa akuntan yang ditawarkan Basic Accounting dapat memaksimalkan pelaporan keuangan secara detil, selaras dengan tujuan checks and balances yang dapat meningkatkan kelayakan perusahaan terkait pemenuhan kewajiban regulasi yang berlaku.</p>
-                    <img src="asset/Want-to-Be-Taken-More-Seriously-06-1024x682.webp" alt="" height="200">
-                </div>
-            </div>
-            <div class="container">
-                <h1>Mengapa Harus Basic Accounting </h1>
-            </div>
-            <table>
-                <tr>
-                    <td>
-                        <h3>Layanan Berkualitas</h3>
-                        <p>Memberikan layanan yang terbaik dengan memahami kebutuhan bisnis. Solusi yang ditawarkan khusus diaplikasikan dengan bisnis terkait.</p>
-                    </td>
-                    <td>
-                        <h3>Solusi Lengkap</h3>
-                        <p>Kami memastikan pelanggan puas dengan melayani sepenuh hati. Kami menawarkan layanan lengkap, mulai jasa akuntan, pelaporan pajak, serta audit keuangan</p>
-                    </td>
-                    <td>
-                        <h3>Hemat Waktu dan Biaya</h3>
-                    <p>Konsultan akuntansi dan pajak kami membantu bisnis untuk menghemat biaya dan juga waktu agar operasional perusahaan bisa tetap fokus menjaga kinerja.</p>
-                    </td>
-                </tr>
-            </table>
-        </main>
-        <footer>
-            <div class="footer">
-                <p>Copyright &copy; 2218025 Dzulfidho 2024</p>
-            </div>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="asset/accounting.png" />
+    <title>Basic Accounting</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="#home" class="navbar-logo">Basic<span>Accounting</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#service">Layanan</a>
+        <a href="login.html">Login</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- main -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1><span>Konsultan Akuntansi</span> di Indonesia</h1>
+        <p>Mulai dari pengusaha UMKM hingga Perusahaan Besar</p>
+        <a href="#" class="cta">Layanan</a>
+      </main>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="about">
+      <h2>Pentingnya Jasa <span>Akuntan</span> di Indonesia</h2>
+      <div class="row">
+        <div class="about-img">
+          <img src="asset/jasa-akuntansi.jpeg" alt="Tentang Kami" width="220" />
+        </div>
+        <div class="content">
+          <h3>Mengapa Itu Penting</h3>
+          <p>
+            Dalam memastikan bisnis asing di Indonesia memiliki kepatutan
+            finansial yang baik, pemerintah Indonesia membuat kebijakan agar
+            para pelaku bisnis asing di Indonesia mematuhi kewajiban terkait
+            pelaporan finansial dan pajak. Dengan peraturan yang cenderung
+            rumit, mendapatkan bantuan dari firma pajak dan akuntansi yang
+            memiliki pengetahuan mendalam tentang tolak ukur pelaporan finansial
+            di Indonesia akan membuat prosesnya jadi lebih mudah.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="service">
+      <h2>Layanan Kami</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="asset/audit.jpg" />
+          <div class="card-content">
+            <h3>Audit</h3>
+            <p>
+              Pemeriksaan menyeluruh terhadap laporan keuangan untuk memastikan
+              keakuratan dan kewajaran informasi keuangan
+            </p>
+            <a href="" class="btn">Mulai Kerjasama</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="asset/pajak.jpg" />
+          <div class="card-content">
+            <h3>Perpajakan</h3>
+            <p>
+              Bantuan dalam perencanaan pajak, penyusunan deklarasi pajak, dan
+              mematuhi peraturan perpajakan yang berlaku
+            </p>
+            <a href="" class="btn">Mulai Kerjasama</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="asset/keuangan.jpg" />
+          <div class="card-content">
+            <h3>Keuangan</h3>
+            <p>
+              Nasihat dalam membuat keputusan investasi, perencanaan keuangan,
+              analisis biaya, manajemen risiko, dan strategi bisnis
+            </p>
+            <a href="" class="btn">Mulai Kerjasama</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      feather.replace();
+    </script>
+    <!-- my js -->
+    <script src="js/script.js"></script>
+
+    <footer align="center">
+      <h4>&copy; Basic Accounting 2024</h4>
+    </footer>
+  </body>
 </html>
