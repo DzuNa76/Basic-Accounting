@@ -158,22 +158,31 @@ body {
   display: flex;
 }
 
-.about .row .about-img {
+/* Corousel */
+.about-img {
+  width: 500px;
+  height: 100%;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
   flex: 1 1 45rem;
+  display: flex;
 }
 
-.about .row .about-img img {
+.about-img img {
   width: 100%;
 }
 
 .about .row .content {
   flex: 1 1 35rem;
   padding: 0 1rem;
+  text-align: justify;
 }
 
 .about .row .content h3 {
   font-size: 1.8rem;
   margin-bottom: 1.6rem;
+  text-align: center;
 }
 
 .about .row .content p {
