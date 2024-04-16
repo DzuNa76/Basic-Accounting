@@ -65,3 +65,27 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+// Fungsi Modal
+function bukaModal(kategori) {
+  document.getElementById("myModal").style.display = "flex";
+
+  var nama = document.getElementById("recipient-name").value;
+  var nomorhp = document.getElementById("handphone").value;
+  var alamat = document.getElementById("alamat-text").value;
+
+  document.getElementById("kategori-detail").innerText = "Detail " + kategori;
+
+  document.getElementById("detail-nama").value = nama;
+  document.getElementById("detail-nomorhp").value = nomorhp;
+  document.getElementById("detail-alamat").value = alamat;
+}
+
+function tutupModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+function lakukanPembayaran() {
+  alert("Pemesanan berhasil!");
+  tutupModal2();
+}

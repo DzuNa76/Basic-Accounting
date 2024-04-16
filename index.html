@@ -42,7 +42,7 @@
       <main class="content">
         <h1><span>Konsultan Akuntansi</span> di Indonesia</h1>
         <p>Mulai dari pengusaha UMKM hingga Perusahaan Besar</p>
-        <a href="#" class="cta">Layanan</a>
+        <a href="#service" class="cta">Layanan</a>
       </main>
     </section>
 
@@ -95,7 +95,9 @@
               Pemeriksaan menyeluruh terhadap laporan keuangan untuk memastikan
               keakuratan dan kewajaran informasi keuangan
             </p>
-            <a href="" class="btn">Mulai Kerjasama</a>
+            <a href="#" class="btn" onclick="bukaModal('Audit')"
+              >Mulai Kerjasama</a
+            >
           </div>
         </div>
         <div class="card">
@@ -106,7 +108,9 @@
               Bantuan dalam perencanaan pajak, penyusunan deklarasi pajak, dan
               mematuhi peraturan perpajakan yang berlaku
             </p>
-            <a href="" class="btn">Mulai Kerjasama</a>
+            <a href="#" class="btn" onclick="bukaModal('Perpajakan')"
+              >Mulai Kerjasama</a
+            >
           </div>
         </div>
         <div class="card">
@@ -117,20 +121,133 @@
               Nasihat dalam membuat keputusan investasi, perencanaan keuangan,
               analisis biaya, manajemen risiko, dan strategi bisnis
             </p>
-            <a href="" class="btn">Mulai Kerjasama</a>
+            <a href="#" class="btn" onclick="bukaModal('Keuangan')"
+              >Mulai Kerjasama</a
+            >
           </div>
         </div>
       </div>
     </section>
+
+    <!--  Modal -->
+    <div id="myModal" class="modal-container" onclick="tutupModal()">
+      <div class="modal-dialog" onclick="event.stopPropagation()">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" style="color: purple">
+              Formulit Pembayaran
+            </h1>
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <h4>Pembeli</h4>
+              <div class="form-group">
+                <label
+                  class="labelmodal"
+                  for="detail-nama"
+                  class="col-form-label"
+                  >Nama :</label
+                >
+                <input
+                  class="inputdata"
+                  type="text"
+                  class="form-control"
+                  id="detail-nama"
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  class="labelmodal"
+                  for="detail-nomorhp"
+                  class="col-form-label"
+                  >No. Hp :</label
+                >
+                <input
+                  class="inputdata"
+                  type="text"
+                  class="form-control"
+                  id="detail-nomorhp"
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  class="labelmodal"
+                  for="detail-alamat"
+                  class="col-form-label"
+                  >Alamat:</label
+                >
+                <textarea
+                  class="inputalamat"
+                  class="form-control"
+                  id="detail-alamat"
+                ></textarea>
+              </div>
+              <h4>Kategori</h4>
+              <div class="form-group">
+                <label
+                  class="labelmodal"
+                  for="detail-kategori"
+                  class="col-form-label"
+                  >Kategori :</label
+                >
+                <input
+                  class="inputdata"
+                  type="text"
+                  class="form-control"
+                  id="detail-kategori"
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  class="labelmodal"
+                  for="detail-harga"
+                  class="col-form-label"
+                  >Lama Waktu :</label
+                >
+                <input
+                  class="inputdata"
+                  type="text"
+                  class="form-control"
+                  id="detail-harga"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" onclick="tutupModal()">
+              Keluar
+            </button>
+            <button type="button" class="btn" onclick="lakukanPembayaran()">
+              Kirim
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#service">Layanan</a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">Dzulfidho</a>. | &copy; 2024.</p>
+      </div>
+    </footer>
 
     <script>
       feather.replace();
     </script>
     <!-- my js -->
     <script src="js/script.js"></script>
-
-    <footer align="center">
-      <h4>&copy; Basic Accounting 2024</h4>
-    </footer>
   </body>
 </html>
