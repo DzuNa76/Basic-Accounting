@@ -18,20 +18,20 @@
   </head>
   <body>
     <div class="wrapper">
-      <form action="">
+    <form action="client/login_process.php" method="post">
         <h1>Login</h1>
         <div class="register-link">
           <p>
             Kembali ke
-            <a href="index.html">Beranda</a>
+            <a href="index.php">Beranda</a>
           </p>
         </div>
         <div class="input-box">
-          <input type="text" placeholder="Username" required />
+          <input type="text" placeholder="Username" required name="Username" />
           <i class="bx bxs-user"></i>
         </div>
         <div class="input-box">
-          <input type="password" placeholder="Password" required />
+          <input type="password" placeholder="Password" required name="Password" />
           <i class="bx bxs-lock-alt"></i>
         </div>
 
@@ -40,12 +40,12 @@
           <a href="#">Forgot Password?</a>
         </div>
 
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn" name="login">Login</button>
 
         <div class="register-link">
           <p>
             Don't Have an Account
-            <a href="register.html">Register</a>
+            <a href="register.php">Register</a>
           </p>
         </div>
       </form>

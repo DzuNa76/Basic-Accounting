@@ -23,7 +23,7 @@ body {
   color: #fff;
   overflow: hidden;
   transition: all 0.5s linear;
-  background: rgba(117, 79, 213, 255);
+  background: rgba(255, 0, 127, 255);
 }
 .sidebar:hover {
   width: 280px;

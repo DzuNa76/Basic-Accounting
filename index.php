@@ -28,7 +28,7 @@
         <a href="#home">Home</a>
         <a href="#about">Tentang Kami</a>
         <a href="#service">Layanan</a>
-        <a href="login.html">Login</a>
+        <a href="login.php">Login</a>
       </div>
 
       <div class="navbar-extra">
@@ -129,19 +129,18 @@
       </div>
     </section>
 
-    <!--  Modal -->
+    <!--  Popup Form -->
     <div id="myModal" class="modal-container" onclick="tutupModal()">
       <div class="modal-dialog" onclick="event.stopPropagation()">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title" style="color: purple">
-              Formulit Pembayaran
+              Formulit Pengajuan
             </h1>
-            <button type="button" class="btn-close" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form>
-              <h4>Pembeli</h4>
+              <h4>Pengajuan</h4>
               <div class="form-group">
                 <label
                   class="labelmodal"
@@ -226,6 +225,7 @@
       </div>
     </div>
 
+    <!-- Footer -->
     <footer>
       <div class="socials">
         <a href="#"><i data-feather="instagram"></i></a>

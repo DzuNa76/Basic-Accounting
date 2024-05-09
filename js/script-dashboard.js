@@ -55,6 +55,6 @@ window.onload = function () {
   } else {
     // Redirect or display an error message
     document.body.innerHTML =
-      "<h1>Unauthorized Access</h1><p>You do not have permission to access this page.</p>";
+      "<h1>Unauthorized Access You do not have permission to access this page.</h1>";
   }
 };
