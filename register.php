@@ -18,25 +18,25 @@
   </head>
   <body>
     <div class="wrapper">
-      <form action="">
+    <form action="client/register_process.php" method="post">
         <h1>Sign Up</h1>
         <div class="input-box">
-          <input type="text" placeholder="Email" required />
+          <input type="text" placeholder="Email" required name="Email"/>
           <i class="bx bx-envelope"></i>
         </div>
         <div class="input-box">
-          <input type="text" placeholder="Username" required />
+          <input type="text" placeholder="Username" required name="Username"/>
           <i class="bx bxs-user"></i>
         </div>
         <div class="input-box">
-          <input type="password" placeholder="Password" required />
+          <input type="password" placeholder="Password" required name="Password"/>
           <i class="bx bxs-lock-alt"></i>
         </div>
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btn" name="register">Register</button>
         <div class="register-link">
           <p>
             Have an Account
-            <a href="login.html">Sign In</a>
+            <a href="login.php">Sign In</a>
           </p>
         </div>
       </form>

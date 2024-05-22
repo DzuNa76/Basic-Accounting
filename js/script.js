@@ -70,15 +70,17 @@ function showSlides(n) {
 function bukaModal(kategori) {
   document.getElementById("myModal").style.display = "flex";
 
-  var nama = document.getElementById("recipient-name").value;
-  var nomorhp = document.getElementById("handphone").value;
-  var alamat = document.getElementById("alamat-text").value;
-
-  document.getElementById("kategori-detail").innerText = "Detail " + kategori;
+  var nama = document.getElementById("detail-nama").value;
+  var nomorhp = document.getElementById("detail-nomorhp").value;
+  var alamat = document.getElementById("detail-alamat").value;
+  var kategoriInput = document.getElementById("detail-kategori").value;
+  var lamaWaktu = document.getElementById("detail-harga").value;
 
   document.getElementById("detail-nama").value = nama;
   document.getElementById("detail-nomorhp").value = nomorhp;
   document.getElementById("detail-alamat").value = alamat;
+  document.getElementById("detail-kategori").value = kategoriInput;
+  document.getElementById("detail-harga").value = lamaWaktu;
 }
 
 function tutupModal() {
@@ -86,6 +88,6 @@ function tutupModal() {
 }
 
 function lakukanPembayaran() {
-  alert("Pemesanan berhasil!");
-  tutupModal2();
+  alert("Pengajuan Terkirim!");
+  tutupModal();
 }

@@ -287,12 +287,6 @@ body {
   max-width: 500px;
 }
 
-.close-btn {
-  float: right;
-  font-size: 30px;
-  cursor: pointer;
-}
-
 .popup-form-content form {
   display: flex;
   flex-direction: column;
