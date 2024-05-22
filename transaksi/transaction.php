@@ -28,6 +28,12 @@
           </a>
         </li>
         <li>
+            <a href="../layanan/edit_layanan.php">
+                <i class="fas fa-edit"></i>
+                <span>Edit Data</span>
+            </a>
+        </li>
+        <li>
           <a href="../layanan/service.php">
           <i class="fas fa-briefcase"></i>
             <span>Service</span>
@@ -40,7 +46,7 @@
           </a>
         </li>
         <li class="logout">
-          <a href="#">
+          <a href="client/logout.php">
             <i class="fas fa-sign-out-alt"></i>
             <span>Log out</span>
           </a>

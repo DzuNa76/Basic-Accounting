@@ -42,6 +42,12 @@ $username = $_SESSION['username'];
                 </a>
             </li>
             <li>
+                <a href="layanan/edit_layanan.php">
+                    <i class="fas fa-edit"></i>
+                    <span>Edit Data</span>
+                </a>
+            </li>
+            <li>
                 <a href="layanan/service.php">
                     <i class="fas fa-briefcase"></i>
                     <span>Service</span>

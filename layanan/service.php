@@ -25,6 +25,12 @@
             </a>
         </li>
         <li>
+            <a href="edit_layanan.php">
+                <i class="fas fa-edit"></i>
+                <span>Edit Data</span>
+            </a>
+        </li>
+        <li>
             <a href="#">
                 <i class="fas fa-briefcase"></i>
                 <span>Service</span>
@@ -37,7 +43,7 @@
             </a>
         </li>
         <li class="logout">
-            <a href="#">
+            <a href="/client/logout.php">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Log out</span>
             </a>
@@ -88,8 +94,7 @@
                           echo "<td>" . $row['lama_waktu'] . "</td>";
                           echo "<td>Rp. " . number_format($row['harga'], 0, ',', '.') . "</td>";
                           echo "<td>";
-                          // Perbarui tombol "Edit" untuk menavigasi ke entry-layanan.php dengan parameter ID
-                          echo "<form action='entry-layanan.php' method='get'>";
+                          echo "<form action='edit_layanan.php' method='get'>";
                           echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
                           echo "<button type='submit' class='btn-edit'>Edit</button>";
                           echo "</form>";
