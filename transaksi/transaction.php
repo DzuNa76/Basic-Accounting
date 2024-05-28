@@ -93,7 +93,7 @@ $result = $koneksi->query($query);
                                 echo "<td>" . $row['Username'] . "</td>";
                                 echo "<td>" . $row['Kategori'] . "</td>";
                                 echo "<td>Rp. " . number_format($row['harga'], 0, ',', '.') . "</td>";
-                                echo "<td><p class='success'></p></td>";
+                                echo "<td><p class='success'>Sukses</p></td>";
                                 echo "<td>";
                                 echo "<form action='edit_transaksi.php' method='get'>";
                                 echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
