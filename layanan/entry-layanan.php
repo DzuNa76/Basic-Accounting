@@ -25,12 +25,6 @@
             </a>
         </li>
         <li>
-            <a href="edit_layanan.php">
-                <i class="fas fa-edit"></i>
-                <span>Edit Data</span>
-            </a>
-        </li>
-        <li>
             <a href="service.php">
                 <i class="fas fa-briefcase"></i>
                 <span>Service</span>
@@ -67,7 +61,7 @@
   <div class="tabel-wrapper">
     <h3 class="main-title">Input Data</h3>
       <div class="form-wrapper">
-          <form action="process_layanan.php" method="post">
+          <form action="process_layanan.php" method="post" enctype="multipart/form-data">
               <div class="form-group">
                   <label for="layanan">Layanan</label>
                   <input type="text" id="layanan" name="layanan" required>
@@ -84,9 +78,15 @@
                   <label for="harga">Harga</label>
                   <input type="text" id="harga" name="harga" required>
               </div>
-              <div class="button-container">
-                  <button type="submit" class="move-button">Submit</button>
+              <div class="form-group">
+                  <label for="foto">Foto</label>
+                  <input type="file" id="foto" name="foto" accept="image/*">
               </div>
+              <div class="button-container">
+                    <form action="cetak_transaksi.php" method="post">
+                        <button type="submit" class="move-button">Submit</button>
+                    </form>
+                </div>
           </form>
       </div>
   </div>

@@ -26,12 +26,6 @@
         </li>
         <li>
             <a href="service.php">
-                <i class="fas fa-edit"></i>
-                <span>Edit Data</span>
-            </a>
-        </li>
-        <li>
-            <a href="service.php">
                 <i class="fas fa-briefcase"></i>
                 <span>Service</span>
             </a>
@@ -96,7 +90,12 @@
                             <label for="harga">Harga</label>
                             <input type="text" id="harga" name="harga" value="<?php echo $row['harga']; ?>" required>
                         </div>
+                        <div class="form-group">
+                            <label for="foto">Foto</label>
+                            <input type="file" id="foto" name="foto" accept="image/*">
+                        </div>
                         <div class="button-container">
+                            <a href="service.php" class="move-button" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #ccc; color: #000; border-radius: 5px;">Kembali</a>
                             <button type="submit" class="move-button">Update</button>
                         </div>
                     </form>

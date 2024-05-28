@@ -25,12 +25,6 @@
             </a>
         </li>
         <li>
-            <a href="edit_layanan.php">
-                <i class="fas fa-edit"></i>
-                <span>Edit Data</span>
-            </a>
-        </li>
-        <li>
             <a href="#">
                 <i class="fas fa-briefcase"></i>
                 <span>Service</span>
@@ -43,7 +37,7 @@
             </a>
         </li>
         <li class="logout">
-            <a href="/client/logout.php">
+            <a href="../client/logout.php">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Log out</span>
             </a>
@@ -65,10 +59,14 @@
         </div>
     </div>
     <div class="tabular--wrapper">
+    <div class="button-container">
+                <a href="../layanan/cetak_layanan.php" class="move-button" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #ccc; color: #000; border-radius: 5px;">Cetak</a>
+            </div>
         <div class="table-container">
             <table>
                 <thead>
                 <tr>
+                    <th>Foto</th>
                     <th>Layanan</th>
                     <th>Deskripsi</th>
                     <th>Lama Waktu</th>
@@ -89,6 +87,7 @@
                       // Tampilkan data layanan dalam bentuk tabel
                       while ($row = $result->fetch_assoc()) {
                           echo "<tr>";
+                          echo "<td><img src='../asset/" . $row['foto'] . "' alt='Foto Layanan' style='width:100px; height:auto;'></td>";
                           echo "<td>" . $row['layanan'] . "</td>";
                           echo "<td>" . $row['deskripsi'] . "</td>";
                           echo "<td>" . $row['lama_waktu'] . "</td>";
@@ -106,7 +105,7 @@
                           echo "</tr>";
                       }
                   } else {
-                      echo "<tr><td colspan='5'>Tidak ada data layanan</td></tr>";
+                      echo "<tr><td colspan='6'>Tidak ada data layanan</td></tr>";
                   }
 
                   // Tutup koneksi database

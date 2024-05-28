@@ -1,12 +1,12 @@
 // Toggle class active
 const navbarNav = document.querySelector(".navbar-nav");
 
-//ketika diklik
+// Ketika hamburger menu diklik
 document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };
 
-//klik diluar nav
+// Ketika klik diluar navbar
 const hamburger = document.querySelector("#hamburger-menu");
 
 document.addEventListener("click", function (e) {
@@ -15,7 +15,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-//Carousel automatically
+// Carousel automatically
 var firstindex = 0;
 function autoSlide() {
   var gbr;
@@ -32,7 +32,7 @@ function autoSlide() {
 }
 autoSlide();
 
-//Carousel Button
+// Carousel Button
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -64,30 +64,4 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-}
-
-// Fungsi Modal
-function bukaModal(kategori) {
-  document.getElementById("myModal").style.display = "flex";
-
-  var nama = document.getElementById("detail-nama").value;
-  var nomorhp = document.getElementById("detail-nomorhp").value;
-  var alamat = document.getElementById("detail-alamat").value;
-  var kategoriInput = document.getElementById("detail-kategori").value;
-  var lamaWaktu = document.getElementById("detail-harga").value;
-
-  document.getElementById("detail-nama").value = nama;
-  document.getElementById("detail-nomorhp").value = nomorhp;
-  document.getElementById("detail-alamat").value = alamat;
-  document.getElementById("detail-kategori").value = kategoriInput;
-  document.getElementById("detail-harga").value = lamaWaktu;
-}
-
-function tutupModal() {
-  document.getElementById("myModal").style.display = "none";
-}
-
-function lakukanPembayaran() {
-  alert("Pengajuan Terkirim!");
-  tutupModal();
 }

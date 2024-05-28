@@ -42,12 +42,6 @@ $username = $_SESSION['username'];
                 </a>
             </li>
             <li>
-                <a href="layanan/edit_layanan.php">
-                    <i class="fas fa-edit"></i>
-                    <span>Edit Data</span>
-                </a>
-            </li>
-            <li>
                 <a href="layanan/service.php">
                     <i class="fas fa-briefcase"></i>
                     <span>Service</span>
@@ -92,6 +86,6 @@ $username = $_SESSION['username'];
     </div>
 
     <!-- script -->
-    <script src="js/dashboard-script.js"></script>
+    <script src="js/script-dashboard.js"></script>
 </body>
 </html>

@@ -83,146 +83,83 @@
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
     </section>
+    <!-- Bagian Layanan -->
+      <?php
+        // Sertakan file koneksi.php yang berisi kode untuk melakukan koneksi ke database
+        include 'koneksi.php';
 
-    <section id="service" class="service">
-      <h2>Layanan Kami</h2>
-      <div class="card-container">
-        <div class="card">
-          <img src="asset/audit.jpg" />
-          <div class="card-content">
-            <h3>Audit</h3>
-            <p>
-              Pemeriksaan menyeluruh terhadap laporan keuangan untuk memastikan
-              keakuratan dan kewajaran informasi keuangan
-            </p>
-            <a href="#" class="btn" onclick="bukaModal('Audit')"
-              >Mulai Kerjasama</a
-            >
-          </div>
-        </div>
-        <div class="card">
-          <img src="asset/pajak.jpg" />
-          <div class="card-content">
-            <h3>Perpajakan</h3>
-            <p>
-              Bantuan dalam perencanaan pajak, penyusunan deklarasi pajak, dan
-              mematuhi peraturan perpajakan yang berlaku
-            </p>
-            <a href="#" class="btn" onclick="bukaModal('Perpajakan')"
-              >Mulai Kerjasama</a
-            >
-          </div>
-        </div>
-        <div class="card">
-          <img src="asset/keuangan.jpg" />
-          <div class="card-content">
-            <h3>Keuangan</h3>
-            <p>
-              Nasihat dalam membuat keputusan investasi, perencanaan keuangan,
-              analisis biaya, manajemen risiko, dan strategi bisnis
-            </p>
-            <a href="#" class="btn" onclick="bukaModal('Keuangan')"
-              >Mulai Kerjasama</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+        // Buat query untuk mengambil data Layanan dari tabel layanan
+        $query = "SELECT * FROM tb_input_layanan";
+        $result = $koneksi->query($query);
 
-    <!--  Popup Form -->
+        // Cek apakah ada data yang ditemukan
+        if ($result->num_rows > 0) {
+            // Tampilkan data Layanan dalam bagian Layanan di halaman index.php
+            echo '<section id="service" class="service">';
+            echo '<h2>Layanan Kami</h2>';
+            echo '<div class="card-container">';
+            // Loop melalui hasil query untuk menampilkan setiap data Layanan
+            while ($row = $result->fetch_assoc()) {
+                echo '<div class="card">';
+                echo '<img src="asset/' . $row['foto'] . '" />';
+                echo '<div class="card-content">';
+                echo '<h3>' . $row['layanan'] . '</h3>';
+                echo '<p>' . $row['deskripsi'] . '</p>';
+                echo '<a href="#" class="btn" onclick="bukaModal(' . $row['id'] . ')">Mulai Kerjasama</a>';
+                echo '</div>';
+                echo '</div>';
+            }
+            echo '</div>';
+            echo '</section>';
+        } else {
+            // Jika tidak ada data Layanan
+            echo "Tidak ada data Layanan.";
+        }
+
+        // Tutup koneksi database
+        $koneksi->close();
+        ?>
+    <!-- Bagian Layanan -->
+
+    <!-- Popup Form -->
     <div id="myModal" class="modal-container" onclick="tutupModal()">
-      <div class="modal-dialog" onclick="event.stopPropagation()">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title" style="color: purple">
-              Formulit Pengajuan
-            </h1>
-          </div>
-          <div class="modal-body">
-            <form>
-              <h4>Pengajuan</h4>
-              <div class="form-group">
-                <label
-                  class="labelmodal"
-                  for="detail-nama"
-                  class="col-form-label"
-                  >Nama :</label
-                >
-                <input
-                  class="inputdata"
-                  type="text"
-                  class="form-control"
-                  id="detail-nama"
-                />
-              </div>
-              <div class="form-group">
-                <label
-                  class="labelmodal"
-                  for="detail-nomorhp"
-                  class="col-form-label"
-                  >No. Hp :</label
-                >
-                <input
-                  class="inputdata"
-                  type="text"
-                  class="form-control"
-                  id="detail-nomorhp"
-                />
-              </div>
-              <div class="form-group">
-                <label
-                  class="labelmodal"
-                  for="detail-alamat"
-                  class="col-form-label"
-                  >Alamat:</label
-                >
-                <textarea
-                  class="inputalamat"
-                  class="form-control"
-                  id="detail-alamat"
-                ></textarea>
-              </div>
-              <h4>Kategori</h4>
-              <div class="form-group">
-                <label
-                  class="labelmodal"
-                  for="detail-kategori"
-                  class="col-form-label"
-                  >Kategori :</label
-                >
-                <input
-                  class="inputdata"
-                  type="text"
-                  class="form-control"
-                  id="detail-kategori"
-                />
-              </div>
-              <div class="form-group">
-                <label
-                  class="labelmodal"
-                  for="detail-harga"
-                  class="col-form-label"
-                  >Lama Waktu :</label
-                >
-                <input
-                  class="inputdata"
-                  type="text"
-                  class="form-control"
-                  id="detail-harga"
-                />
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn" onclick="tutupModal()">
-              Keluar
-            </button>
-            <button type="button" class="btn" onclick="lakukanPembayaran()">
-              Kirim
-            </button>
-          </div>
+        <div class="modal-dialog" onclick="event.stopPropagation()">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" style="color: purple">Formulit Pengajuan</h1>
+                </div>
+                <div class="modal-body">
+                    <form action="transaksi/proses_pengajuan.php" method="post">
+                        <h4>Pengajuan</h4>
+                        <div class="form-group">
+                            <label class="labelmodal" for="detail-nama">Nama :</label>
+                            <input class="inputdata" type="text" name="nama" class="form-control" id="detail-nama" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="labelmodal" for="detail-nomorhp">No. Hp :</label>
+                            <input class="inputdata" type="text" name="nomorhp" class="form-control" id="detail-nomorhp" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="labelmodal" for="detail-alamat">Alamat:</label>
+                            <textarea class="inputalamat" name="alamat" class="form-control" id="detail-alamat" required></textarea>
+                        </div>
+                        <h4>Kategori</h4>
+                        <div class="form-group">
+                            <label class="labelmodal" for="detail-kategori">Kategori :</label>
+                            <!-- Mengubah input menjadi readonly -->
+                            <input class="inputdata" type="text" name="kategori" class="form-control" id="detail-kategori" readonly required>
+                        </div>
+                        <div class="form-group">
+                            <label class="labelmodal" for="detail-harga">Harga :</label>
+                            <!-- Mengubah input menjadi readonly -->
+                            <input class="inputdata" type="text" name="harga" class="form-control" id="detail-harga" readonly required>
+                        </div>
+                        <button type="button" class="btn" onclick="tutupModal()">Keluar</button>
+                        <button type="submit" class="btn">Kirim</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Footer -->
@@ -249,5 +186,31 @@
     </script>
     <!-- my js -->
     <script src="js/script.js"></script>
+    <script>
+      // Fungsi untuk membuka modal dan mengisi data kategori secara otomatis
+      function bukaModal(categoryId) {
+          // Menggunakan AJAX untuk memanggil skrip PHP get_kategori.php
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState == 4 && xhr.status == 200) {
+                  // Mendapatkan respons JSON dari skrip PHP
+                  var responseData = JSON.parse(xhr.responseText);
+                  // Mengisi data kategori ke dalam formulir modal
+                  document.getElementById('detail-kategori').value = responseData.kategori;
+                  document.getElementById('detail-harga').value = responseData.harga;
+                  // Menampilkan modal
+                  document.getElementById("myModal").style.display = "flex";
+              }
+          };
+          // Mengirimkan request GET ke skrip PHP dengan parameter categoryId
+          xhr.open("GET", "get_kategori.php?id=" + categoryId, true);
+          xhr.send();
+      }
+
+      // Fungsi untuk menutup modal
+      function tutupModal() {
+          document.getElementById("myModal").style.display = "none";
+      }
+    </script>
   </body>
 </html>
