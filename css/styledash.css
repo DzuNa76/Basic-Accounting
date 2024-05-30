@@ -337,3 +337,30 @@ input[type="text"] {
   display: flex;
   justify-content: flex-end;
 }
+
+.stats-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.stats-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+}
+
+.stats-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.stats-card p {
+  margin: 0;
+  font-size: 2em;
+  color: #000;
+}
